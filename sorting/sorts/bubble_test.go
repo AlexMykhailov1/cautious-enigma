@@ -7,8 +7,8 @@ import (
 
 func TestBubble(t *testing.T) {
 	t.Parallel()
-	// init test cases
-	testTable := []struct {
+
+	testCases := []struct {
 		name  string
 		input []int
 		want  []int
@@ -45,7 +45,7 @@ func TestBubble(t *testing.T) {
 		},
 	}
 	// run tests
-	for _, tc := range testTable {
+	for _, tc := range testCases {
 		tc := tc
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
